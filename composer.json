@@ -1,0 +1,40 @@
+{
+    "name": "the_alex_mark/laravel-sms",
+    "version": "1.0",
+    "description": "Реализует отправку смс-сообщений",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Макаров Александр",
+            "email": "the_alex_mark@mail.ru",
+            "homepage": "https://the-alex-mark.ru"
+        }
+    ],
+    "keywords": [ "laravel", "sms", "smpp", "beesms" ],
+    "minimum-stability": "stable",
+    "require": {
+        "php": "^7.0",
+        "ext-dom": "*",
+        "ext-json": "*",
+        "php-smpp/php-smpp": "^1.2",
+        "the_alex_mark/beesms": "^1.6"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.21"
+    },
+    "autoload": {
+        "psr-4": {
+            "ProgLib\\Sms\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "ProgLib\\Sms\\Providers\\SmsServiceProvider"
+            ],
+            "aliases": {
+                "SMS": "ProgLib\\Sms\\Facades\\SMS"
+            }
+        }
+    }
+}
